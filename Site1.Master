@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="jobportel1.Site1" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Styles/Site.css" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+        <div class="nav">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Vertical" StaticDisplayLevels="2" DynamicHorizontalOffset="2">
+                <Items>
+                    <asp:MenuItem Text="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Jobs" NavigateUrl="~/Jobs.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="About Us" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Contact Us" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle CssClass="hover" />
+                <StaticMenuItemStyle CssClass="menu" />
+                <StaticSelectedStyle CssClass="selected" />
+            </asp:Menu>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </div>
+    </form>
+</body>
+</html>
+
